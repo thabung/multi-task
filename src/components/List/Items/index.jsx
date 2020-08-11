@@ -34,7 +34,8 @@ import { v4 } from 'uuid';
 import { flattenData } from '../../../flattenData';
 
 import ItemCreationForm from '../ItemCreationForm';
-// import Item from '../Item';
+
+// ns__remove_import Item from '../Item';
 
 import { SOURCE_LIST_ID } from '../../../config';
 import { LIST_RELATIONSHIPS, SOURCE_LIST_QUERY } from '../../source-props/list';
@@ -141,6 +142,8 @@ class Items extends Component {
                     //   refetchQueries={refetchQueries}
                     //   onSelect={this.handleSelect}
                     // />
+                    // ns__custom_start unit: list, comp: Items, loc: renderEnding 
+
                     <Accordion
                       index={index}
                       key={v4()}
@@ -149,10 +152,10 @@ class Items extends Component {
                       selected={item.id === selectedItemId}
                       refetchQueries={refetchQueries}
                     />
+                    // ns__custom_end unit: list, comp: Items, loc: renderEnding 
+
                   ))}
               </ItemsStyleWrapper>
-              {/* ns__custom_start unit: list, comp: Items, loc: renderEnding */}
-              {/* ns__custom_end unit: list, comp: Items, loc: renderEnding */}
             </>
           );
         }}
